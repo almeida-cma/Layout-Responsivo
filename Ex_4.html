@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Container</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .header, .sidenav, .content, .footer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: lightblue;
+      padding: 10px;
+    /*  margin: 5px;  Adicionei um pequeno espaço entre os grids */
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 30% 60%;
+      grid-template-rows: 30px 180px 20px;
+      grid-template-areas: "header header" "sidenav content" "footer footer";
+      grid-gap: 5px;
+      grid-gap: 5px 10px;
+    }
+
+    .header {
+      grid-area: header;
+    }
+
+    .sidenav {
+      grid-area: sidenav;
+    }
+
+    .content {
+      grid-area: content;
+    }
+
+    .footer {
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="sidenav">Sidenav</div>
+    <div class="content">Content</div>
+    <div class="footer">Footer</div>
+  </div>
+
+</body>
+</html>

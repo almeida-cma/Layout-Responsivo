@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: [sidebar] 1fr [content] 2fr;
+      gap: 20px; /* Adicionei um espaçamento entre as colunas para melhor visualização */
+    }
+
+    .content {
+      grid-column: content;
+      background-color: lightblue;
+      padding: 20px;
+    }
+
+    .sidebar {
+      grid-column: sidebar;
+      background-color: lightgray;
+      padding: 20px;
+    }
+  </style>
+  <title>Grid Example</title>
+</head>
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+      <!-- Conteúdo da barra lateral -->
+      This is the sidebar content.
+    </div>
+    <div class="content">
+      <!-- Conteúdo principal -->
+      This is the main content that spans the second column of the grid.
+    </div>
+  </div>
+
+</body>
+</html>

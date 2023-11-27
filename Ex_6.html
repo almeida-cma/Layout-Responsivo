@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo Flexbox Responsivo</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .main {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #EFEFEF;
+            flex-wrap: wrap; /* Permite que os itens quebrem em novas colunas */
+        }
+
+        .main div {
+            background-color: #CCC;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: calc(33.333% - 20px);  /*Calcula a largura para 3 itens em uma linha com espaçamento */
+            max-width: 200px;
+        }
+
+        @media screen and (max-width: 767px) {
+            /* Estilos para telas menores que 768px (tamanhos de tela de tablets e smartphones) */
+            .main div {
+                width: calc(100% - 20px);  /*Largura total para itens empilhados em uma coluna */
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main">
+        <div>Primeiro div</div>
+        <div>Segundo div</div>
+        <div>Terceiro div</div>
+    </div>
+
+</body>
+
+</html>
